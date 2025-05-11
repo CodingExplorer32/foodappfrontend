@@ -1,0 +1,62 @@
+{
+  "expo": {
+    "name": "foodapp",
+    "slug": "foodapp",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/hamro_logo.png",
+    "scheme": "foodapp",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "edgeToEdgeEnabled": true
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/hamro_khana.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff"
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos to let you share them with your friends."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./local/assets/notification_icon.png",
+          "color": "#ffffff",
+          "defaultChannel": "default",
+          "sounds": [
+            "./local/assets/notification_sound.wav",
+            "./local/assets/notification_sound_other.wav"
+          ],
+          "enableBackgroundRemoteNotifications": false
+        }
+      ],
+      "expo-video"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
